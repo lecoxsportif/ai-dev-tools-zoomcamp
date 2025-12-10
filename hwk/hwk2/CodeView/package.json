@@ -1,0 +1,16 @@
+{
+  "name": "codeview",
+  "version": "1.0.0",
+  "description": "CodeView is a collaborative code editor similar to CoderPad, allowing users to write and execute code together in real-time.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run start --prefix server\" \"npm run dev --prefix client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

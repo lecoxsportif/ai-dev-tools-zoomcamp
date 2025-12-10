@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: codeview
+    env: docker
+    plan: free
+    region: oregon
+    branch: main
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 3001

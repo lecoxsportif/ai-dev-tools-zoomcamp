@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: CodeView API
+  description: |
+    Backend for CodeView real-time collaboration platform.
+    
+    **Note**: The primary communication for the collaboration features (coding, cursors) happens via WebSockets using the Yjs protocol, which is not fully described by this REST OpenAPI specification.
+  version: 1.0.0
+servers:
+  - url: http://localhost:1234
+    description: Local Development Server
+paths:
+  /:
+    get:
+      summary: Health Check
+      description: Returns a confirmation that the server is running.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "CodeView Server is running"
